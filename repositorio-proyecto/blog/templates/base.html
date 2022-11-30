@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MI WEB| {% block titulo %} {% endblock titulo %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+
+<body class="contenedor">
+
+	<header class="sticky-header__header">
+		<div class="linea-header"> </div>
+		<nav class="encabezado">	
+
+			<div class="imgMenu">
+				<img src="{% static 'img/AsociacionCivilJEA.jpg'%}" alt="JuntosEnAccion">
+				<h2>Asociasion juntos en accion</h2>
+			</div>
+
+			<div class="aMenu">
+			<a href="{% url 'home' %}">HOME</a>
+			<a href="#footer">CONTACTO</a>
+			<a href="{% url 'noticias:listar' %}">NOTICIAS</a>
+			</div>
+		</nav>
+	
+	</header>
+	
+	
+
+	{% block contenido %}
+
+	{% endblock contenido %}
+
+	<footer class="footer" id="footer">
+
+	</footer>
+</body>
+</html>
