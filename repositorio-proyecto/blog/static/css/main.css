@@ -215,6 +215,21 @@ article img{
 
 /*Aside de los articulos de relacionados*/
 
+
+
+.container-aside{
+    border-top: 6px solid orangered;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 15px;
+    margin-left: 15px;
+}
+
+.container-aside h2{
+    padding-bottom: 24px;
+    padding-left: 36px;
+}
+
 .container-aside aside{
   width: 320px;
   border-right: 6px;
@@ -264,6 +279,28 @@ article img{
     margin-top: 40px;
 }
 
+.footer-Grande{
+    display: inline-flex;
+    padding: 20px;
+    justify-content: center;
+    width: 100%;
+}
+.footer-Contac{
+    width: 30%;
+    padding-top: 40px;
+}
+.footer-Contac p{
+    padding-top: 25px;
+}
+.footer-Mid{
+    width:30%;
+}
+.footer-direccion{
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 30%;
+}
+
 .container-footer footer{
     max-width: 1200px;
     margin: auto;
@@ -303,7 +340,7 @@ footer .redes-footer .fa-facebook-f:hover{
 }
 
 footer .redes-footer .fa-google-plus-g:hover{
-    background: #DE4C34;
+    background: #41579A;
     color: #fff;
 }
 
