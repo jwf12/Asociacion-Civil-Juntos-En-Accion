@@ -175,6 +175,12 @@ header{
     display: flex;
     justify-content: center;
 }
+.img-obj{
+    margin-bottom: 70px;
+}
+.img-obj figcaption{
+    color: #8e8e8e;
+}
 
 article{
     width: 100%;
@@ -268,7 +274,28 @@ article img{
     opacity: 0.9;
 }
 
+/*LOGIN FORM*/
 
+.login-form{   
+    padding: 200px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.cuadrado-login{
+    box-shadow: 1px 0px 10px 4px rgba(205, 96, 1, 0.28);
+    background-color: #fffcf5;
+    border-radius: 34px;
+    width: 189px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 35px;
+}
+.cuadrado-login input{
+    margin: 5px;
+}
 
 /*Footer - pie de pagina*/
 
@@ -286,8 +313,9 @@ article img{
     width: 100%;
 }
 .footer-Contac{
-    width: 30%;
-    padding-top: 40px;
+    width: 25%;
+    padding-top: 60px;
+    padding-left: 20px;
 }
 .footer-Contac p{
     padding-top: 25px;
@@ -296,9 +324,9 @@ article img{
     width:30%;
 }
 .footer-direccion{
-    padding-top: 40px;
-    padding-left: 40px;
-    width: 30%;
+    padding-top: 60px;
+    padding-left: 50px;
+    width: 35%;
 }
 
 .container-footer footer{
@@ -315,8 +343,6 @@ article img{
 }
 
 .container-footer footer .redes-footer{
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
 }
 
@@ -324,7 +350,7 @@ article img{
 .container-footer footer .redes-footer .icon-redes-footer{
     font-size: 20px;
     margin: 20px;
-    background: #efefef;
+    background: #73aee2;
     width: 50px;
     height: 50px;
     display: flex;
@@ -332,6 +358,15 @@ article img{
     align-items: center;
     border-radius: 100%;
     color: #a2a2a2;
+    text-align: center;
+}
+.redes-footer{
+    display: inline-block;
+    text-align: center;
+    padding-left: 85px;
+}
+.redes-logos{
+    display: inline-flex;
 }
 
 footer .redes-footer .fa-facebook-f:hover{
@@ -339,13 +374,9 @@ footer .redes-footer .fa-facebook-f:hover{
     color: #fff;
 }
 
+
 footer .redes-footer .fa-google-plus-g:hover{
     background: #41579A;
-    color: #fff;
-}
-
-footer .redes-footer .fa-instagram:hover{
-    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
     color: #fff;
 }
 

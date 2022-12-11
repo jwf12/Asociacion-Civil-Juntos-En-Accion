@@ -3,9 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <title>Asociacion juntos en accion</title>
-
-    <script src="{% static 'https://kit.fontawesome.com/41bcea2ae3.js' %}" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
@@ -29,9 +28,9 @@
 
                 <nav>
                     <ul>
-                        <li><a href="{% url 'home' %}">INICIO</a></li>
-                        <li><a href="#footer">CONTACTO</a></li>
+                        <li><a href="{% url 'home' %}">INICIO</a></li>          
                         <li><a href="{% url 'noticias:listar' %}">NOTICIAS</a></li>
+                        <li><a href="#footer">CONTACTO</a></li>
                         {% if user.is_authenticated %}
                         <strong>Hola {{ user.username }}</strong>
                         <li><a href="{% url 'logout' %}">LOGOUT</a></li>
@@ -48,80 +47,10 @@
         </div>
 
     </header>
+    {% block contenido%}
 
-    <!--Portada-->
-
-    <div class="container-all" id="move-content">
-
-    
-    <div class="container-cover">
-        <div class="container-info-cover">
-            <h1>¡Todo es posible!</h1>
-            <h2>La inclusion laboral, un compromiso de todos.</h2>
-        </div>
-    </div>
-
-    <div class="container-content">
-        <article>
-
-            <h1>Quienes somos</h1>
-
-            <p>JUNTOS EN ACCION  es una Asociación Civil sin fines de lucro formada    por ciudadanos al servicio de las personas con discapacidad
-                Nuestros principales objetivos son:</p>
-
-                <p> a) Apoyar, contener y asesorar, propiciando el involucramiento de las familias y la sensibilización de la comunidad.
-                </p>
-
-               <p> b) Crear espacios priorizando actividades dentro de la recreación y capacitación laboral.
-               </p>
-
-                <p>
-                c) Resaltar la  importancia de la inclusión social y laboral de las personas con discapacidad, para su realización personal. 
-                </p>
-                <p>
-                d) Insertar al joven con discapacidad en el mundo laboral. 
-                </p>
-                <p>
-                La institución está dirigida y administrada por una Comisión Directiva compuesta de un presidente, un secretario, un tesorero, un vocal titular y un vocal suplente y también una comisión Revisora de Cuentas compuesta por un miembro Titular y uno Suplente.
-                </p>
-
-                <h1>Nuestros objetivos</h1>
-
-                <p>bla bla bla bla bla</p>
-
-                <img src="{% static 'img/foto1.jpg' %}" alt="">
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae id nam incidunt quam corrupti, vitae numquam aliquid qui, sit libero hic nesciunt iste repudiandae, quae debitis, deleniti cupiditate. Iste, iusto? ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
-        </article>
-
-        <div class="container-aside">   
-
-            <h2>Noticias</h2>
-
-            <aside>
-                <img src="{% static 'img/foto2.jpg' %}" alt="">
-                <h2>Titulo del articulo</h2>
-            </aside>
-
-            <aside>
-                <img src="{% static 'img/img1.jpg' %}" alt="">
-                <h2>Titulo del articulo</h2>
-                
-            </aside>
-
-            <aside>
-                <img src="{% static 'img/img4.jpg' %}" alt="">
-                <h2>Titulo del articulo</h2>
-            </aside>
-
-        </div>
-    </div>
+    {% endblock contenido %}
+   
 
     <div class="container-footer" id="footer">  
 
@@ -143,23 +72,28 @@
             
 
             <div class="redes-footer">
+                <div><h3>SEGUINOS!</h3></div>
+
+                <div class="redes-logos">
                 <a href="https://www.facebook.com/profile.php?id=100064567493574"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
-                <a href="https://www.facebook.com/people/UEP-N%C2%BA-143-CENTRO-DE-FORMACION-INTEGRAL/100063611561590/"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
-                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+                <a href="https://www.facebook.com/people/UEP-N%C2%BA-143-CENTRO-DE-FORMACION-INTEGRAL/100063611561590/"><i class="fab fa-google-plus-g icon-redes-footer"></i></a> 
+                </div>
+              
+                
             </div>
             </div>
 
             <div class="footer-direccion">
                 <h2>Direccion:</h2>
 
-                <p>ACA IRIA UNA IMAgEN / EL MAPA DE GOOGLE</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.5047048757444!2d-60.4472419318075!3d-26.786261423383593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94412ce3c68bc62f%3A0x8c842a33abd51d5a!2sDorrego%20490%2C%20H3700IAJ%20S%C3%A1enz%20Pe%C3%B1a%2C%20Chaco!5e0!3m2!1ses!2sar!4v1670713424075!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
 
 
             <hr>
-            <h4>© 2020 MagtimusPro - Todos los Derechos Reservados</h4>
+            
 
         </footer>
 

@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block contenido %}
+
+<div class="login-form">
+    <div class="cuadrado-login">
             <form method="POST"> {%csrf_token%}
                 {{form.errors}}
                 <input type="text" name="username" placeholder="USUARIO">
@@ -8,4 +11,6 @@
                 
                 <input type="submit" name="" id="ENVIAR">
             </form>
+    </div>
+</div>
 {% endblock %}
