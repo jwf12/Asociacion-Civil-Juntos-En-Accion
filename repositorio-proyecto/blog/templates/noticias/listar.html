@@ -7,9 +7,19 @@
     <h2>listar</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae id nam incidunt quam corrupti, vitae numquam aliquid qui, sit libero hic nesciunt iste repudiandae, quae debitis, deleniti cupiditate. Iste, iusto? ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae id nam incidunt quam corrupti, vitae numquam aliquid qui, sit libero hic nesciunt iste repudiandae, quae debitis, deleniti cupiditate. Iste, iusto? ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+    {% for noti in noticia %}
+        <a href="{% url 'noticias:detalle' noti.pk %}"><img src="{{noti.imagen.url}}" width= 200px class="categoria-prim-p"></a>
+
+        <a href="{% url 'noticias:detalle' noti.pk %}"><p>{{noti.titulo}}</p></a>
+        
+        <p>{{noti.fecha}}</p>
+        <p class="categoria-ulti-p">{{noti.categoria_noticia}}</p>
+    {% endfor %}
+
 {% endblock contenido %}

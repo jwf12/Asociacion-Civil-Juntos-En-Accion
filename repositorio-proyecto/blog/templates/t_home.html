@@ -63,21 +63,16 @@
             <h2>Noticias</h2>
 
             <aside>
-                <img src="{% static 'img/foto2.jpg' %}" alt="">
-                <h2>Titulo del articulo</h2>
-            </aside>
 
-            <aside>
-                <img src="{% static 'img/img1.jpg' %}" alt="">
-                <h2>Titulo del articulo</h2>
+                {% for noti in notiFecha %}
                 
-            </aside>
+                <img src="noti.imagen.url" width=200px>
 
-            <aside>
-                <img src="{% static 'img/img4.jpg' %}" alt="">
-                <h2>Titulo del articulo</h2>
-            </aside>
+                <h2>{{noti.titulo}}</h2>
 
+                {% endfor %}
+
+            </aside>
         </div>
     </div>
 {% endblock contenido %}

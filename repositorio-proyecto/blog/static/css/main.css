@@ -38,7 +38,9 @@ header{
     color: orangered ;
 }
 
-
+strong{
+    margin-top: 30px;
+}
 .menu {
     height: 80px;
 }
@@ -221,7 +223,13 @@ article img{
 
 /*Aside de los articulos de relacionados*/
 
-
+.categoria-prim-p{
+    margin-top: 25px;
+}
+.categoria-ulti-p{
+    
+    margin-bottom: 25px;
+}
 
 .container-aside{
     border-top: 6px solid orangered;
@@ -321,6 +329,8 @@ article img{
     padding-top: 25px;
 }
 .footer-Mid{
+    border-left: 0.5px solid orangered;
+    border-right: 0.5px solid orangered;
     width:30%;
 }
 .footer-direccion{
