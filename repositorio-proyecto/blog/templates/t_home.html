@@ -64,11 +64,11 @@
 
             <aside>
 
-                {% for noti in notiFecha %}
+                {% for noticia in notiFecha %}
                 
-                <img src="noti.imagen.url" width=200px>
+                    <img src="{{noticia.imagen.url}}" width=200px>
 
-                <h2>{{noti.titulo}}</h2>
+                    <h2>{{noticia.titulo}}</h2>
 
                 {% endfor %}
 

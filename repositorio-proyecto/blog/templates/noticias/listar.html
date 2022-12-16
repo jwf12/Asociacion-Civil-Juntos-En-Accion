@@ -12,6 +12,13 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    
+    <div>
+        {% for cat in categorias %}
+            <a href="?id={{cat.pk}}">{{cat.categoria}}</a>
+
+        {% endfor %}
+    </div>
 
     {% for noti in noticia %}
         <a href="{% url 'noticias:detalle' noti.pk %}"><img src="{{noti.imagen.url}}" width= 200px class="categoria-prim-p"></a>
@@ -22,4 +29,6 @@
         <p class="categoria-ulti-p">{{noti.categoria_noticia}}</p>
     {% endfor %}
 
+
+    
 {% endblock contenido %}

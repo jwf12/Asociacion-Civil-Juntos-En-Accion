@@ -8,10 +8,13 @@
 
     <h2>Detalle</h2>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ipsam nulla, neque necessitatibus porro quibusdam unde ipsa veritatis. Consequuntur voluptates, maxime magnam est facere tempora corporis ad voluptatibus dicta iure! ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    
+    <p>{{noticia.titulo}}</p>
 
-    {% for noti in noticia %}
-     
-    {% endfor %}
+    <img src="{{noticia.imagen.url}}" width= 500px class="categoria-prim-p">
+
+    <p>{{noticia.cuerpo}}</p>
+        
+   
 
 {% endblock contenido %}
