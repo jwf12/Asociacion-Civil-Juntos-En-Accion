@@ -38,8 +38,9 @@
 						USUARIO:{{com.usuario}}<br>
 						
 						{% if user == com.usuario %}
-							<a href="">borrar</a>
+							<a href="{% url 'noticias:borrar' com.id %}">borrar</a>
 						{% endif %}
+
 					</div>
 
 					<div class="com-indi-txt">

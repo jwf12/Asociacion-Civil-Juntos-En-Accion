@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from django.contrib.auth.decorators import login_required
 
 from .models import Noticia, Categoria, Comentario
 
+from django.http import  HttpResponseRedirect
 
 from django.core.paginator import (Paginator,EmptyPage,PageNotAnInteger)
 
@@ -46,6 +47,7 @@ def Listar_Noticias(request):
 
 
 
+
 @login_required
 def Detalle_Noticias(request, pk):
 	contexto = {}
@@ -60,6 +62,8 @@ def Detalle_Noticias(request, pk):
 	return render(request, 'noticias/detalle.html',contexto)
 
 
+
+
 @login_required
 def Comentar_Noticia(request):
 
@@ -70,6 +74,18 @@ def Comentar_Noticia(request):
 	coment = Comentario.objects.create(usuario = usu, noticia = noticia, texto = com)
 
 	return redirect(reverse_lazy('noticias:detalle', kwargs={'pk': noti}))
+
+
+
+@login_required
+def Delete(request, com_id):
+	
+	if Comentario.objects.get(id = com_id):
+		borrar = Comentario.objects.get(id = com_id)
+		borrar.delete()
+
+	return redirect(request, 'listar')
+
 
 
 
