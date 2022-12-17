@@ -349,6 +349,74 @@ article img{
 
 
 
+/*        Detalle     */ 
+
+.detalle{
+    margin: 100px auto;
+    width: 90%;
+    text-align: center;
+}
+.post-detalle{
+    box-shadow: 1px 0px 10px 4px rgba(248, 166, 93, 0.28);
+    background-color: #fffcf5;
+    border-radius: 34px;
+}
+.tit-img-detalle p{
+    width: 90%;
+    padding:50px 0px 50px 0px;
+    margin: 0 auto;
+}
+.tit-img-detalle a{
+    margin: 10px;
+}
+
+.form-detalle{
+    box-shadow: 1px 0px 10px 4px rgba(248, 166, 93, 0.28);
+    background-color: #fffcf5;
+    border-radius: 34px;
+    width: 40%;
+    margin: 33px auto;
+    height: 197px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form-detalle textarea{
+    width: 372px;
+    height: 90px;
+}
+.caja-com-detalle{
+    width: 90%;
+    padding:50px 0px 50px 0px;
+    margin: 0 auto;
+    box-shadow: 1px 0px 10px 4px rgba(248, 166, 93, 0.28);
+    background-color: #fffcf5;
+    border-radius: 34px;
+}
+.com-indi{
+    box-shadow: 1px 0px 10px 4px rgb(249 129 85 / 28%);
+    background-color: #fffcf5;
+    border-radius: 34px;
+    display: flex;
+    margin: 40px 15px 0px 15px;
+    padding: 10px;
+}
+.com-indi-info{
+    width: 20%;
+    padding-right: 10px;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-right: 1px solid rgb(249 129 85 / 28%);
+}
+.com-indi-txt{
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
