@@ -17,7 +17,7 @@
             <a href="{% url 'noticias:listar' %}">Todas</a>
         </div>
         <div class="img-noticias">
-            {% for noti in items_page %}
+            {% for noti in pagi %}
                 <div class="posteo-noticias">
                     <a href="{% url 'noticias:detalle' noti.pk %}"><img src="{{noti.imagen.url}}"></a>
                     
@@ -29,8 +29,18 @@
                     <p>{{noti.categoria_noticia}}</p>
                 </div>
             {% endfor %}
+    
         </div>
 
+        {% if pagi.has_previous %}
+            <a href="?page={{pagi.previous_page_number}}">&laquo  Anterior</a>
+        {% endif %}
+
+        {{pagi.number}} de {{pagi.paginator.num_pages}}
+
+        {% if pagi.has_next %}
+            <a href="?page={{pagi.next_page_number}}"> Siguiente  &raquo</a>
+        {% endif %}
     </div>
     
 {% endblock contenido %}

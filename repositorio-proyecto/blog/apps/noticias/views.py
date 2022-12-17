@@ -38,7 +38,7 @@ def Listar_Noticias(request):
 			items_page = paginator.page(paginator.num_pages)
 
 
-	contexto['items_page'] = items_page
+	contexto['pagi'] = items_page
 
 	cat = Categoria.objects.all().order_by('categoria')
 	contexto['categorias'] = cat
