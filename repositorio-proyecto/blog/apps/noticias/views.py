@@ -20,9 +20,9 @@ def Listar_Noticias(request):
 	id_categoria = request.GET.get('id', None)
 
 	if id_categoria:
-		n = Noticia.objects.filter(categoria_noticia = id_categoria)
+		n = Noticia.objects.filter(categoria_noticia = id_categoria).order_by('-fecha')
 	else:
-		n = Noticia.objects.all()
+		n = Noticia.objects.all().order_by('-fecha')
 
 	contexto['noticia'] = n
 
