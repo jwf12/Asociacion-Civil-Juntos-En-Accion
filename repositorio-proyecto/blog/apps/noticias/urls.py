@@ -7,4 +7,5 @@ urlpatterns = [
 	path('', views.Listar_Noticias, name = 'listar'),
 	path('Detalle/<int:pk>', views.Detalle_Noticias, name = 'detalle'),
 	path('', views.Noticias_base, name='t_home'),
+	path('Comentario/', views.Comentar_Noticia, name='comentar')
 ]
