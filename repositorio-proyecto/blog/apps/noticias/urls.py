@@ -10,5 +10,5 @@ urlpatterns = [
 	path('delete/<com_id>', views.Delete, name='borrar'),
 
 
-	path('', views.Noticias_base, name='home'),
+	path('home/', views.Noticias_base, name='home'),
 ]

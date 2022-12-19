@@ -1,14 +1,13 @@
 from django.shortcuts import render, redirect
 
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 
 from django.contrib.auth.decorators import login_required
 
 from .models import Noticia, Categoria, Comentario
 
-from django.http import  HttpResponseRedirect
-
 from django.core.paginator import (Paginator,EmptyPage,PageNotAnInteger)
+
 
 
 
@@ -72,31 +71,29 @@ def Comentar_Noticia(request):
 	noti = request.POST.get('id_noticia', None)# OBTENGO LA PK
 	noticia = Noticia.objects.get(pk = noti) #BUSCO LA NOTICIA CON ESA PK
 	coment = Comentario.objects.create(usuario = usu, noticia = noticia, texto = com)
-
+	
 	return redirect(reverse_lazy('noticias:detalle', kwargs={'pk': noti}))
 
 
 
 @login_required
 def Delete(request, com_id):
+	borrar = Comentario.objects.get(id = com_id)
+	borrar.delete()
 	
-	if Comentario.objects.get(id = com_id):
-		borrar = Comentario.objects.get(id = com_id)
-		borrar.delete()
-
-	return redirect(request, 'listar')
+	return redirect('noticias:listar')
 
 
 
-
-
+ 
 
 def Noticias_base(request):
+	
 	contexto ={}
 
-	nDate = Noticia.objects.all().order_by('fecha')[:3] # Esto es para mostrar los...
-	#ultimos tres por fecha. (va a servir para el aside)
-	contexto['notiFecha'] = nDate
+	n = Noticia.objects.all().order_by('-fecha')[:3] # Esto es para mostrar los...
+	#ultimos tres por fecha.
+	contexto['notiFecha'] = n
 
 	return render(request, 't_home.html', contexto) 
 

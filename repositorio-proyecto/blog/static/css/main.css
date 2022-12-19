@@ -231,6 +231,24 @@ article img{
     margin-bottom: 25px;
 }
 
+.aside-post{
+    text-align: center;
+    
+}
+.aside-post img{
+    width:80%;
+    margin-top:40px;
+    padding-top: 8px;
+    border-top: 1px solid orangered;
+}
+.aside-post h3{
+    border-bottom: 1px solid orangered;
+    margin-bottom: 20px;
+}
+.aside-post a{
+    text-decoration: none;
+}
+
 .container-aside{
     border-top: 6px solid orangered;
     border-top-left-radius: 5px;
@@ -255,9 +273,6 @@ article img{
   padding-bottom: 20px;
 }
 
-.container-aside aside img{
-    width: 100%;
-}
 
 .container-aside aside h2,
 .container-aside aside p{
@@ -363,7 +378,7 @@ article img{
     box-shadow: 1px 0px 10px 4px rgba(248, 166, 93, 0.28);
     background-color: #fffcf5;
     border-radius: 34px;
-    padding: 70px;
+    padding: 6%;
 }
 .img-noticias img{
     width: 200px;

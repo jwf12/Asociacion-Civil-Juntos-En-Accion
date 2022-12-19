@@ -63,14 +63,16 @@
             <h2>Noticias</h2>
 
             <aside>
+                <div class="aside-post">
+                    {% for noti in notiFecha %}
+                        
+                        <a href="{% url 'noticias:detalle' noti.pk %}"><img src="{{noti.imagen.url}}"></a>
+                        
+                        
+                        <a href="{% url 'noticias:detalle' noti.pk %}"><h3>{{noti.titulo}}</h3></a>
 
-                {% for noticia in notiFecha %}
-                
-                    <img src="{{noticia.imagen.url}}" width=200px>
-
-                    <h2>{{noticia.titulo}}</h2>
-
-                {% endfor %}
+                    {% endfor %}
+                </div>
 
             </aside>
         </div>
