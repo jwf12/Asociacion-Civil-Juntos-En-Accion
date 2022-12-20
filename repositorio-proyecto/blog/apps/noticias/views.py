@@ -82,20 +82,3 @@ def Delete(request, com_id):
 	borrar.delete()
 	
 	return redirect('noticias:listar')
-
-
-
- 
-
-def Noticias_base(request):
-	
-	contexto ={}
-
-	n = Noticia.objects.all().order_by('-fecha')[:3] # Esto es para mostrar los...
-	#ultimos tres por fecha.
-	contexto['notiFecha'] = n
-
-	return render(request, 't_home.html', contexto) 
-
-
-

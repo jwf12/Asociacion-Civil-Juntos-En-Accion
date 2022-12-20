@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     
-    path('Noticias/home', views.Home, name = 'home'),
+    path('', views.Noticias_base, name = 'home'),
     # Lo primero es el texto de la URL
     # Lo segundo es la vista que va a ejecutar
     # Lo tercero es el nombre de la URL (aun no lo usamos)

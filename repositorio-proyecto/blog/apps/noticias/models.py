@@ -19,8 +19,6 @@ class Noticia(models.Model):
     fecha = models.DateTimeField(auto_now=True)
     def __str__ (self):
         return self.titulo
-    class meta():
-        ordering = ['-fecha']
 
 
 class Comentario (models.Model):
