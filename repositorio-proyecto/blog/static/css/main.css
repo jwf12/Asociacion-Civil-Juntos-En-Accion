@@ -681,6 +681,12 @@ footer .redes-footer .fa-google-plus-g:hover{
     #icon-menu{
         display: flex;
     }
+    .logo h1{
+        font-size: 15px;
+    }
+    .logo b{
+        font-size: 15px;
+    }
     .submenu-noticias{
         height: auto;
     }
@@ -716,7 +722,9 @@ footer .redes-footer .fa-google-plus-g:hover{
         text-align: end;
         margin-bottom: 10%;
     }
-    
+    .footer-direccion{
+        padding-left: 0;
+    }
     .footer-direccion iframe{
         width: 300px;
     }    
@@ -733,5 +741,8 @@ footer .redes-footer .fa-google-plus-g:hover{
     }
     strong{
         margin-left: 20px;
+    }
+    .img-noticias{
+        padding: 6% 0 0 15%;
     }
 }
