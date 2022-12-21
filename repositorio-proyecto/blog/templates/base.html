@@ -24,10 +24,12 @@
                 <h1>Asociacion <b>JUNTOS EN ACCION</b></h1>
             </div>
 
+            <input type="checkbox" id="logo-menu">
+            <label for="logo-menu"><img src="{%static 'img/menu.png'%}" alt=""></label>
             <div class="menu" id="show-menu">
 
                 <nav>
-                    <ul>
+                    <ul class="list">
                         <li><a href="{% url 'home' %}">INICIO</a></li>          
                         <li><a href="{% url 'noticias:listar' %}">NOTICIAS</a></li>
                         <li><a href="#footer">CONTACTO</a></li>
