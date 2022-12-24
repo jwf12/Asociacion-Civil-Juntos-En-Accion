@@ -628,9 +628,12 @@ footer .redes-footer .fa-google-plus-g:hover{
         transform: translateX(300px);
     }
 
+
+        /* Slide Menu */
+
     .menu{
         width: 0px;
-        height: 100vh;
+        height: 0vh;
         position: fixed;
         top: 80px;
         left: 0;
@@ -663,9 +666,10 @@ footer .redes-footer .fa-google-plus-g:hover{
     }
 
     #logo-menu:checked ~ .menu{
-        max-height: 0%;
-        
+        height: 50vh;        
     }
+
+
     .menu nav ul li a{
         margin-top: 40px;
         color: #858585;
@@ -677,6 +681,7 @@ footer .redes-footer .fa-google-plus-g:hover{
         margin-right: 10px;
         color: #46a2fd;
     }
+    /* Header Bar*/
 
     #icon-menu{
         display: flex;
@@ -691,9 +696,12 @@ footer .redes-footer .fa-google-plus-g:hover{
         height: auto;
     }
 
+    /*Container */
     .container-aside{
         flex-wrap: wrap;
     }
+
+    /*Footer */
     .footer-Grande{
         display: flex;
         flex-direction: column;
